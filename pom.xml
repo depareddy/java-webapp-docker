@@ -5,7 +5,7 @@
   <artifactId>simplewebapp</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>getting-started-tomcat Maven Webapp</name>
+  <name>Webapp</name>
   <url>http://maven.apache.org</url>
 
 
@@ -19,13 +19,13 @@
 
   </dependencies>
   <build>
-    <finalName>getting-started-tomcat</finalName>
+    <finalName>simplewebapp</finalName>
       <plugins>
           <plugin>
               <artifactId>maven-war-plugin</artifactId>
               <version>2.6</version>
               <configuration>
-                 <webXml>src\main\webapp\WEB-INF\web.xml</webXml> 
+                <failOnMissingWebXml>false</failOnMissingWebXml>
                   <warName>simplewebapp</warName>
               </configuration>
           </plugin>
