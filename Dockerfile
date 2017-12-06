@@ -23,7 +23,7 @@ RUN tar xzf apache-tomcat-8.5.9.tar.gz
 
 WORKDIR /code
 
-COPY /code/target/simplewebapp.war apache-tomcat-8.5.9/webapps/
+COPY /code/src/main/webapp/index.jsp apache-tomcat-8.5.9/webapps/
  
 EXPOSE 8080 
 
