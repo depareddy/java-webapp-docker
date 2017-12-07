@@ -1,4 +1,4 @@
-FROM java:8 AS BUILD
+FROM java:8
 ENV APP_HOME=/root/code/
 RUN rm -rf $APP_HOME
 RUN mkdir -p $APP_HOME
@@ -23,6 +23,6 @@ FROM tomcat:8.0.20-jre8
 # WORKDIR /root/
 EXPOSE 8080 
 
-COPY --from=BUILD /root/code/target/*.war /usr/local/tomcat/webapps/simplewebapp.war
+COPY /root/code/target/*.war /usr/local/tomcat/webapps/simplewebapp.war
 
 CMD /usr/local/tomcat/bin/startup.sh && tail -f /usr/local/tomcat/logs/catalina.out
