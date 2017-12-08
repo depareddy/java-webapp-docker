@@ -12,7 +12,7 @@ phases:
       - eval $(aws ecr get-login)
   build:
     commands:
-      - mvn clean package    
+      - aws s3 cp s3://docker-ecs-simple/simplewebapp.war simplewebapp.war    
   post_build:
     commands:
       - echo Build started on `date`
