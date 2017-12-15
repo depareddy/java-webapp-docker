@@ -11,7 +11,7 @@ phases:
       - eval $(aws ecr get-login)
   build:
     commands:
-      - eval $(AWSCOPY)    
+      - $AWSCOPY    
   post_build:
     commands:
       - echo Build started on `date`
