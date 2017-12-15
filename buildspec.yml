@@ -7,7 +7,7 @@ phases:
       - eval $(aws ecr get-login)
   build:
     commands:
-      - aws s3 cp s3://docker-ecs-simple/$(WEBCONTEXT) simplewebapp.war    
+      - aws s3 cp s3://docker-ecs-simple/simplewebapptest.war simplewebapp.war    
   post_build:
     commands:
       - echo Build started on `date`
