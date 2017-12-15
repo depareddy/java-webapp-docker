@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t simplewebapp .
+      - docker build -t simplewebapp --build-arg WEBCONTEXT=$WEBCONTEXT .
       - docker tag simplewebapp:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$AWS_REPO_NAME:latest
       - echo Build completed on `date`
       - echo Pushing the Docker image...
