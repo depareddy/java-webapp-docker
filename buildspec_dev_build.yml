@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    AWSCOPY: "aws s3 cp s3://docker-ecs-simple/simplewebappdev.war simplewebapp.war"
-
 phases:
   pre_build:
     commands:
@@ -11,7 +7,7 @@ phases:
       - eval $(aws ecr get-login)
   build:
     commands:
-      - eval $(AWSCOPY)    
+      - aws s3 cp s3://docker-ecs-simple/simplewebapptest.war simplewebapp.war    
   post_build:
     commands:
       - echo Build started on `date`
