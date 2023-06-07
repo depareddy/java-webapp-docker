@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>docker-jenkins-ecs</groupId>
   <artifactId>simplewebapp</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Webapp</name>
   <url>http://maven.apache.org</url>
@@ -22,8 +22,8 @@
     <finalName>simplewebapp</finalName>
       <plugins>
           <plugin>
-              <artifactId>maven-war-plugin</artifactId>
-              <version>2.6</version>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>3.5</version>
           </plugin>
       </plugins>
   </build>
